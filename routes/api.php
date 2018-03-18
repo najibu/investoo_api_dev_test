@@ -14,4 +14,5 @@
 
 Route::group(['prefix' => 'v1'], function () {
     Route::resource('files', FilesController::class);
+    Route::get('files/download/{id}', 'FilesController@download');
 });
